@@ -1,5 +1,5 @@
 const request = require('request');
-const chalk = require('chalk');
+//const chalk = require('chalk');
 const getWeather = (lat, long, callback) => {
     const weatherURL = 'https://api.darksky.net/forecast/cde15fbde03cc7cafd934c0c80f4d052/' + lat + ',' + long + '?units=si&lang=es'
         //callback(undefined, weatherURL);

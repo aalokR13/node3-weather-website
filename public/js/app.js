@@ -9,7 +9,7 @@ weather.addEventListener('submit', (e) => {
     document.getElementById('weather_result_p').innerHTML = 'Loading...............';
     e.preventDefault();
     if (addr) {
-        fetch('http://localhost:3000/weather?address=' + addr).then((response) => {
+        fetch('/weather?address=' + addr).then((response) => {
             response.json().then((data) => {
                 console.log(data);
                 document.getElementById('weather_result_p').innerHTML = data.forecastdata;

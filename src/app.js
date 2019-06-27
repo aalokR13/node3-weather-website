@@ -5,6 +5,7 @@ const geocode = require('./util/geocode');
 const forecast = require('./util/weather');
 //console.log(hbs);
 const app = express();
+const port = process.env.PORT || 3000;
 //console.log(__dirname);
 //console.log(path.join(__dirname, 'public'));
 const publicDir = path.join(__dirname, '../public');
@@ -44,7 +45,7 @@ app.get('/weather', (req, res) => {
             forecast(latitude, longitude, (error, forcastdata) => {
                 if (error) {
                     res.send({ error: error });
-
+                    //  return console.log('Error ', error);
                 }
 
                 res.send({ location: location, forecastdata: forcastdata });
@@ -71,6 +72,6 @@ app.get('*', (req, res) => {
     res.render('404', { "heading": "404 Page", "error": "404 error page not found !" });
 });
 
-app.listen(3000, () => {
-    console.log('port started working');
+app.listen(port, () => {
+    console.log('port started working' + port);
 });

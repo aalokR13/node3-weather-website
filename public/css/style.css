@@ -1,0 +1,28 @@
+body {
+    background: #eee;
+}
+
+p#weather_result_error {
+    color: red;
+}
+
+.nav ul {
+    list-style: none;
+    display: inline;
+}
+
+ul li {
+    list-style: none;
+    display: inline;
+    padding-left: 0;
+}
+
+body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+ul>li {
+    display: inherit;
+    padding: 10px 7px;
+}
